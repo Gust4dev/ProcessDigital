@@ -13,30 +13,6 @@ The project consists of the following components:
 2. **Preprocessing**: Prepares images for analysis, improving the quality and relevance of the data.
 3. **Image Analysis**: Implements methods to analyze processed images for cancer detection.
 
-## Directory Structure
-
-```
-ProcessDigital/
-│
-├── src/
-│   ├── preprocessing/
-│   │   ├── separate_channels.py
-│   │   └── preprocess_image.py
-│   ├── analysis/
-│   │   └── analyze_image.py
-│   └── __init__.py
-│
-├── input_images/
-│   └── (Put your input images here)
-│
-├── output_images/
-│   └── (Processed images will be saved here)
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
-
 ## Requirements
 
 Ensure you have the necessary dependencies installed. Use the following command to install the required packages:
