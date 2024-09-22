@@ -1,79 +1,43 @@
-Claro! Aqui está um exemplo completo de `README.md` em Markdown que você pode usar para documentar seu projeto:
-
-```markdown
 # ProcessDigital
 
-**ProcessDigital** is a project designed for image processing tasks, specifically focused on breast cancer detection and analysis. This repository includes scripts for separating RGB channels from images, preprocessing images, and analyzing breast cancer images.
+**ProcessDigital** is a project focused on image processing for breast cancer detection. This repository contains scripts to separate RGB channels from images.
 
-## Project Overview
+## How It Works
 
-The project consists of the following components:
-
-1. **Separate RGB Channels**: Extracts the red, green, and blue channels from input images.
-2. **Preprocessing**: Prepares images for analysis, improving the quality and relevance of the data.
-3. **Image Analysis**: Implements methods to analyze processed images for cancer detection.
-
-## Requirements
-
-Ensure you have the necessary dependencies installed. Use the following command to install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
+1. **Separate RGB Channels**: The script extracts red, green, and blue channels from input images.
+2. **Input Images**: Place your PNG images in the `input_images` directory.
+3. **Output Images**: After running the script, processed images will be saved in the `output_images` directory.
 
 ## Usage
 
-### 1. Separate RGB Channels
+### Steps to Run
 
-To separate the RGB channels of an image, follow these steps:
+1. Ensure you have the required libraries installed. Use:
 
-1. Place your input images in the `input_images` directory. Ensure they are in PNG format.
-2. Update the `image_names` list in `separate_channels.py` to match your image filenames (without the extension).
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Update the image names in `separate_channels.py` to match your input images.
 3. Run the script:
 
-```bash
-python src/preprocessing/separate_channels.py
-```
+   ```bash
+   python src/preprocessing/separate_channels.py
+   ```
 
-### Output
+## Output
 
-The processed images will be saved in the `output_images` directory. Each channel will be saved as a separate PNG file (e.g., `img1_red.png`, `img1_green.png`, `img1_blue.png`).
-
-### 2. Preprocess Images
-
-For image preprocessing, implement the `preprocess_image.py` script. Make sure to follow similar steps as above to input images and run the script.
-
-### 3. Analyze Images
-
-The `analyze_image.py` script is used to analyze the preprocessed images for the presence or absence of cancer. Update the input path and run the analysis as described above.
-
-## Example Input and Output
-
-### Input Images
-
-- Place your images in the `input_images` folder with the names `img1.png`, `img2.png`, and `img3.png`.
-
-### Output Images
-
-- After running the `separate_channels.py`, the following images will be generated in the `output_images` folder:
-
-```
-img1_red.png
-img1_green.png
-img1_blue.png
-img2_red.png
-img2_green.png
-img2_blue.png
-img3_red.png
-img3_green.png
-img3_blue.png
-```
+The output will include images for each channel, saved as `img1_red.png`, `img1_green.png`, and `img1_blue.png`, etc.
 
 ## Contributing
 
-Contributions are welcome! Feel free to submit issues or pull requests if you have improvements or suggestions.
+Contributions are welcome! Feel free to submit issues or pull requests.
 
 ## License
 
 This project is licensed under the MIT License.
 ```
+
+### Notas:
+- Essa versão é direta e foca nas partes essenciais do projeto.
+- Você pode expandir ou adicionar detalhes conforme necessário no futuro, mas essa estrutura mantém tudo simples e claro.
