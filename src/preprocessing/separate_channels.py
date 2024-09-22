@@ -19,28 +19,38 @@ def split_rgb(image_name):
     # Separação dos canais
     blue, green, red = cv2.split(img)
 
+    # Criando imagens de saída para cada canal
+    red_output = np.zeros_like(img)
+    green_output = np.zeros_like(img)
+    blue_output = np.zeros_like(img)
+
+    # Apenas o canal correspondente é mantido
+    red_output[:, :, 2] = red  # Canal Vermelho
+    green_output[:, :, 1] = green  # Canal Verde
+    blue_output[:, :, 0] = blue  # Canal Azul
+
     # Caminho para salvar as imagens processadas
     output_path = os.path.join(current_dir, '../../output_images/')
     os.makedirs(output_path, exist_ok=True)
 
-    # Salvando cada canal separadamente
-    cv2.imwrite(os.path.join(output_path, f'{image_name}_red.png'), red)
-    cv2.imwrite(os.path.join(output_path, f'{image_name}_green.png'), green)
-    cv2.imwrite(os.path.join(output_path, f'{image_name}_blue.png'), blue)
+    # Salvando as imagens dos canais
+    cv2.imwrite(os.path.join(output_path, f'{image_name}_red.png'), red_output)
+    cv2.imwrite(os.path.join(output_path, f'{image_name}_green.png'), green_output)
+    cv2.imwrite(os.path.join(output_path, f'{image_name}_blue.png'), blue_output)
 
     # Exibe os canais separados
     plt.figure(figsize=(10, 7))
 
     plt.subplot(1, 3, 1)
-    plt.imshow(red, cmap="gray")
+    plt.imshow(cv2.cvtColor(red_output, cv2.COLOR_BGR2RGB))
     plt.title('Canal Vermelho')
 
     plt.subplot(1, 3, 2)
-    plt.imshow(green, cmap="gray")
+    plt.imshow(cv2.cvtColor(green_output, cv2.COLOR_BGR2RGB))
     plt.title('Canal Verde')
 
     plt.subplot(1, 3, 3)
-    plt.imshow(blue, cmap="gray")
+    plt.imshow(cv2.cvtColor(blue_output, cv2.COLOR_BGR2RGB))
     plt.title('Canal Azul')
 
     plt.show()
