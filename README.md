@@ -32,12 +32,3 @@ The output will include images for each channel, saved as `img1_red.png`, `img1_
 ## Contributing
 
 Contributions are welcome! Feel free to submit issues or pull requests.
-
-## License
-
-This project is licensed under the MIT License.
-```
-
-### Notas:
-- Essa versão é direta e foca nas partes essenciais do projeto.
-- Você pode expandir ou adicionar detalhes conforme necessário no futuro, mas essa estrutura mantém tudo simples e claro.
